@@ -3,7 +3,7 @@ const fetchUserData = (userName) =>
     if (response.ok) {
       return response.json();
     }
-    throw alert(new Error("Failed to load data"));
+     alert(new Error("Failed to load data"));
   });
 
 const fetchRepositories = (url) =>
@@ -11,7 +11,7 @@ const fetchRepositories = (url) =>
     if (response.ok) {
       return response.json();
     }
-    throw alert(new Error("Failed to load data"));
+    alert(new Error("Failed to load data"));
   });
 
 export { fetchUserData, fetchRepositories };
