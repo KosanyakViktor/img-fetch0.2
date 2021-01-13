@@ -1,19 +1,14 @@
-   
-const listRepoElem = document.querySelector(".repo-list");
-
-const cleanReposList = () => {
-  listRepoElem.innerHTML = "";
+const listElem = document.querySelector('.repo-list');
+export const cleanReposList = () => {
+  listElem.innerHTML = '';
 };
-
-const renderRepos = (reposList) => {
+export const renderRepos = reposList => {
   const reposListElems = reposList.map(({ name }) => {
-    const listElem = document.createElement("li");
-    listElem.classList.add("repo-list__item");
-    listElem.textContent = name;
-    return listElem;
+    const listItemElem = document.createElement('li');
+    listItemElem.classList.add('repo-list__item');
+    listItemElem.textContent = name;
+    return listItemElem;
   });
   cleanReposList();
-  listRepoElem.append(...reposListElems);
+  listElem.append(...reposListElems);
 };
-
-export { renderRepos, cleanReposList };
